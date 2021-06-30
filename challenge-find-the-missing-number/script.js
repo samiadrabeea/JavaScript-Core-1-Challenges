@@ -1,7 +1,33 @@
-function missingNum(arr) {
+function missingNum(arr) { //------------------solution #1----------------------
   //Write your code in here. You should return the missing the number below.
-  return 0;
+var missingNumber=0;
+var number=0;
+for (let i=0; i< arr.length ; i++){
+  number++;
+  if(arr[i] != number){
+    return number;
+  }
 }
+}
+ console.log(missingNum([1, 2, 3, 4, 6, 7, 8, 9, 10]));
+
+   //------------------solution #2----------------------
+
+   function missingNumber(arr){
+    var missingNumber=0;
+  for (let i=0; i< arr.length ; i++){
+    for(let j=1 ;j<= 10; j++){
+      if(arr[i] !== j){
+       missingNumber = j;
+      }
+    }
+  }
+  return missingNumber;
+}
+ 
+console.log(missingNumber([7, 2, 3, 6, 5, 9, 1, 4, 8]));
+
+  //---------------------------------
 
 /**                            */
 /**                            */
