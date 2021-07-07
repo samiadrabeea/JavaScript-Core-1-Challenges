@@ -1,17 +1,29 @@
-function missingNum(arr) { //------------------solution #1----------------------
-  //Write your code in here. You should return the missing the number below.
+ //Write your code in here. You should return the missing the number below.
+//------------------solution #1----------------------
+function missingNum1(arr) {
+  for (let i = 1; i <= arr.length + 1; i++) {
+    if (arr.indexOf(i) === -1) return i;
+  }
+}
+
+
+//------------------solution #2----------------------
+
+function missingNum(arr) {
 var missingNumber=0;
 var number=0;
+  arr=arr.sort();
 for (let i=0; i< arr.length ; i++){
-  number++;
+ number++;
   if(arr[i] != number){
     return number;
   }
+   
 }
 }
  console.log(missingNum([1, 2, 3, 4, 6, 7, 8, 9, 10]));
 
-   //------------------solution #2----------------------
+   //------------------solution #3----------------------
 
    function missingNumber(arr){
     var missingNumber=0;
@@ -28,6 +40,9 @@ for (let i=0; i< arr.length ; i++){
 console.log(missingNumber([7, 2, 3, 6, 5, 9, 1, 4, 8]));
 
   //---------------------------------
+
+
+
 
 /**                            */
 /**                            */
